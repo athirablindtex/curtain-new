@@ -1,0 +1,2 @@
+jQuery(document).ready(function($){$('.category-btn').on('click',function(){var categorySlug=$(this).data('category');var name=$(this).data('name');$('#spinner').show();$.ajax({url:ajaxfilter.ajaxurl,type:'POST',data:{action:'filter_products',category:categorySlug},success:function(response){$('#products-area').html(response);$('.entry-title').text(name);$('#spinner').hide()},error:function(error){console.log(error)}})})})
+;
